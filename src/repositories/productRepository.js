@@ -1,6 +1,5 @@
 import Product from '../models/Product.js';
 
-// Obtener todos los productos desde la base de datos
 const getAllProducts = async () => {
   try {
     const products = await Product.find();
@@ -10,7 +9,6 @@ const getAllProducts = async () => {
   }
 };
 
-// Obtener un producto por ID desde la base de datos
 const getProductById = async (id) => {
   try {
     const product = await Product.findById(id);
@@ -20,7 +18,6 @@ const getProductById = async (id) => {
   }
 };
 
-// Agregar un nuevo producto a la base de datos
 const addProduct = async (productData) => {
   try {
     const newProduct = new Product(productData);
@@ -31,7 +28,6 @@ const addProduct = async (productData) => {
   }
 };
 
-// Actualizar un producto existente en la base de datos
 const updateProduct = async (id, productData) => {
   try {
     const updatedProduct = await Product.findByIdAndUpdate(id, productData, { new: true });
@@ -41,7 +37,6 @@ const updateProduct = async (id, productData) => {
   }
 };
 
-// Eliminar un producto de la base de datos
 const deleteProduct = async (id) => {
   try {
     const deletedProduct = await Product.findByIdAndDelete(id);

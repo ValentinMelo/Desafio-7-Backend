@@ -5,7 +5,7 @@ import {
   addProduct,
   updateProduct,
   deleteProduct,
-} from '../daos/productDao.js';
+} from '../repositories/productRepository.js';
 
 // Obtener todos los productos
 const getAllProducts = async (req, res) => {
